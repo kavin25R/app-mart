@@ -24,12 +24,11 @@ public class OrderService {
         this.customerRepository=customerRepository;
         this.productRepository=productRepository;
     }
-    public OrderModel saveOrder(Long c_id,Long p_id,int o_quantity){
+    public OrderModel saveOrder(Long c_id,Long p_id,int quantity){
         CustomerModel customerModel=customerRepository.findById(c_id).orElseThrow();
         ProductModel productModel=productRepository.findById(p_id).orElseThrow();
-
-        OrderModel orderModel=new OrderModel(o_quantity, LocalDate.now(), customerModel, productModel);
-        return orderRepository.save(orderModel);
+        OrderModel order;
+        return orderRepository.save(order);
     }
     /*public OrderModel saveOrder(OrderModel orderModel){
         return orderRepository.save(orderModel);
