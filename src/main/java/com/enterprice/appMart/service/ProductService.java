@@ -11,12 +11,15 @@ public class ProductService {
     private final ProductRepository productRepository;
 
     public ProductService(ProductRepository productRepository){
+
         this.productRepository=productRepository;
     }
     public ProductModel saveProduct(ProductModel productModel){
+
         return productRepository.save(productModel);
     }
     public List<ProductModel> getAllProduct(){
+
         return productRepository.findAll();
     }
 }

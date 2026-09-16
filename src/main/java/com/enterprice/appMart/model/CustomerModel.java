@@ -2,6 +2,7 @@ package com.enterprice.appMart.model;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
@@ -21,6 +22,6 @@ public class CustomerModel {
     private String gender;
     private Enum role;
     private int point;
-    private LocalDateTime open_date;
-    private LocalDateTime update_date;
+    private LocalDate open_date;
+    private LocalDate update_date;
 }

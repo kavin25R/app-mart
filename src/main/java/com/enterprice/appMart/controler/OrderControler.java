@@ -15,13 +15,12 @@ public class OrderControler {
     }
     @PostMapping("/insert")
     //public OrderControler(){}
-    public OrderModel saveOrder(@RequestParam Long c_id,
-                                @RequestParam Long p_id,
-                                @RequestParam int o_quantity){
-        return orderService.saveOrder(c_id,p_id,o_quantity);
+    public OrderModel saveOrder(@RequestBody OrderModel orderModel){
+        return orderService.saveOrder(orderModel);
     }
     @GetMapping("/view")
     public List<OrderModel> getAllOrder(){
+
         return orderService.getAllOrder();
     }
 }
